@@ -1,4 +1,4 @@
-package Loops;
+//package Loops;
 
 import java.util.Scanner;
 
@@ -8,6 +8,7 @@ public class DeleteNumber {
         int n = scanner.nextInt();
         int result = 0;
         int resultValue = 0;
+        boolean evenFound = false;
 //        238
 //        0
         while (n>0){
@@ -16,6 +17,7 @@ public class DeleteNumber {
 //            check 3
 //            check 2
             if(check % 2 == 0){
+                evenFound = true;
                 for(int i = 0 ; i < resultValue ; i++){
                     check *=10;
                 }
@@ -28,7 +30,7 @@ public class DeleteNumber {
 
             n = n / 10;
         }
-        if(result > 0){
+        if(evenFound){
             System.out.println(result);
         }else{
             System.out.println("All digits were deleted");
